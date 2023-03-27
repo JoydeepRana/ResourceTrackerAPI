@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5YUqyrf5TyuIjh5oU7z85aUFLD9yCvhabDKn2pdTL2o=",
+  "Source": "ResourceTrackerApi",
+  "BasePath": "_content/ResourceTrackerApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
