@@ -46,7 +46,7 @@ namespace ResourceTrackerApi.Repository
         public Project mapProjectData(ProjectDTO dto)
         {
             Project project = new Project();
-            project.ProjectId = dto.ProjectId;
+            project.ProjectCode = dto.ProjectCode;
             project.Name = dto.ProjectName;
             project.Id = dto.Id;
             project.AccountId= dto.AccountId;

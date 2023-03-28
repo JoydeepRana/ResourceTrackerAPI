@@ -14,14 +14,14 @@ select * from Account;
 
 Create Table Project(
 	id int identity(1,1) Primary key,
-	projectId varchar(60) not null Unique,
+	projectCode varchar(60) not null Unique,
 	projectName varchar(100) not null,
 	accountId int not null references Account(Id),
 	createdDate DateTime not null default(getdate())
 );
 
-Insert into Project(ProjectId, projectName, accountId) values('Summit_123','Summit_NTP1', 1);
-Insert into Project(ProjectId, projectName, accountId) values('Summit_456','Summit_NTP2', 1);
+Insert into Project(ProjectCode, projectName, accountId) values('Summit_123','Summit_NTP1', 1);
+Insert into Project(ProjectCode, projectName, accountId) values('Summit_456','Summit_NTP2', 1);
 
 select * from Project;
 

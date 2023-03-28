@@ -24,7 +24,7 @@ namespace ResourceTrackerApi.Controllers
             {
                 dto = db.Query("Project")
                             .Join("Account", "Project.AccountId", "Account.Id")
-                            .Select("Project.Id", "Project.ProjectId", "Project.projectName", "Project.AccountId", "Account.accountName").Get<ProjectDTO>();
+                            .Select("Project.Id", "Project.ProjectCode", "Project.projectName", "Project.AccountId", "Account.accountName").Get<ProjectDTO>();
             }
             catch (Exception ex){ return null; }
             return dto;
@@ -38,7 +38,7 @@ namespace ResourceTrackerApi.Controllers
             {
                 dto = db.Query("Project")
                             .Join("Account", "Project.AccountId", "Account.Id")
-                            .Select("Project.Id", "Project.ProjectId", "Project.projectName", "Project.AccountId", "Account.accountName").Where("Project.Id", id).FirstOrDefault<ProjectDTO>();
+                            .Select("Project.Id", "Project.ProjectCode", "Project.projectName", "Project.AccountId", "Account.accountName").Where("Project.Id", id).FirstOrDefault<ProjectDTO>();
             }
             catch (Exception ex) { return null; }
             return dto;

@@ -14,7 +14,7 @@ namespace ResourceTrackerApi.Repository
             {
                 id = db.Query("Project").InsertGetId<int>(new
                 {
-                    projectId = project.ProjectId,
+                    projectCode = project.ProjectCode,
                     projectName = project.Name,
                     accountId = project.AccountId
                 });
@@ -30,7 +30,7 @@ namespace ResourceTrackerApi.Repository
             {
                 affectedrowsProject = db.Query("Project").Where("Id", project.Id).Update(new
                 {
-                    projectId = project.ProjectId,
+                    projectCode = project.ProjectCode,
                     projectName = project.Name,
                     accountId = project.AccountId
                 });
